@@ -1,0 +1,9 @@
+[submodule "spacy-dev-resources"]
+	path = spacy-dev-resources
+	url = https://github.com/explosion/spacy-dev-resources.git
+[submodule "wikiextractor"]
+	path = wikiextractor
+	url = https://github.com/MartinoMensio/wikiextractor.git
+[submodule "GloVe"]
+	path = GloVe
+	url = https://github.com/stanfordnlp/GloVe.git
