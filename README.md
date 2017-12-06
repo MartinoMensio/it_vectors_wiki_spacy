@@ -26,6 +26,16 @@ WORD2 values_of_word_2
 
 ## Preparing SpaCy vectors
 
-From the representation of word embeddings in text file, a binary representation is built, ready to be loaded into SpaCy with `nlp.vocab.vectors.from_disk('path')`.
+From the representation of word embeddings in text file, a binary representation is built, ready to be loaded into SpaCy.
 
-Or using the packaged version, `nlp = spacy.load('it_vectors_wiki_lg')`
+The whole SpaCy model (a blank italian nlp + the word vectors) is saved and packaged using the script number 3.
+
+# Using the model
+
+Option 1: do the preceding steps to train the vectors and then load the vectors with `nlp.vocab.vectors.from_disk('path')`.
+
+Option 2: install with pip the complete model from [there](https://github.com/MartinoMensio/it_vectors_wiki_spacy/releases/download/v1.0/it_vectors_wiki_lg-1.0.0.tar.gz) with the following command:
+```bash
+pip install -U https://github.com/MartinoMensio/it_vectors_wiki_spacy/releases/download/v1.0/it_vectors_wiki_lg-1.0.0.tar.gz
+```
+then simply load the model in SpaCy with `nlp = spacy.load('it_vectors_wiki_lg')`
