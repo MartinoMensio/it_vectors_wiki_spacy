@@ -1,3 +1,6 @@
+#!/bin/bash
+set -e
+
 DUMP_LOCATION=data/itwiki-latest-pages-articles.xml.bz2
 PAGES_FOLDER=data/pages/
 OUTPUT_FILE=data/wiki_it_a.txt
