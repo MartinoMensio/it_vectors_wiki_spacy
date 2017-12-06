@@ -26,4 +26,6 @@ WORD2 values_of_word_2
 
 ## Preparing SpaCy vectors
 
-From the representation of word embeddings in text file, a binary representation is built, ready to be loaded into SpaCy with `nlp.vocab.vectors.from_disk('path')`
+From the representation of word embeddings in text file, a binary representation is built, ready to be loaded into SpaCy with `nlp.vocab.vectors.from_disk('path')`.
+
+Or using the packaged version, `nlp = spacy.load('it_vectors_wiki_lg')`

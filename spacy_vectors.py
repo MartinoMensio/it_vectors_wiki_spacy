@@ -14,7 +14,7 @@ end="", flush=True)
     output_folder_model=("location of output folder for saving the whole spacy model")
 )
 def main(input_file, output_folder_vectors=None, output_folder_model=None):
-    nlp = spacy.load('it')
+    nlp = spacy.blank('it')
     with open(input_file, 'rb') as file_:
         header = file_.readline()
         nr_row, nr_dim = header.split()
@@ -36,11 +36,15 @@ def main(input_file, output_folder_vectors=None, output_folder_model=None):
     if(output_folder_model):
         # edit package details
         nlp.meta['name'] = 'vectors_wiki_lg'
-        nlp.meta['author'] = 'Martino Mensio'
-        nlp.meta['notes'] = 'This model adds Wikipedia word embeddings on top of the model it_core_news_sm by Explosion AI'
+        nlp.meta['lang'] = 'it'
+        nlp.meta['version'] = '1.0.0'
+        nlp.meta['spacy_version'] = '>=2.0.0,<3.0.0'
         nlp.meta['description'] = '300-dimensional word vectors trained on Wikipedia with GloVe.'
+        nlp.meta['author'] = 'Martino Mensio'
+        nlp.meta['email'] = 'martinomensio@outlook.it'
+        nlp.meta['license'] = 'CC BY-SA 3.0'
+        nlp.meta['notes'] = 'This model adds Wikipedia word embeddings on the blank italian model'
         nlp.meta['url'] = 'https://github.com/MartinoMensio/it_vectors_wiki_spacy'
-        nlp.meta['parent_package'] = 'it_core_news_sm'
         # and save to disk
         nlp.to_disk(output_folder_model)
 
