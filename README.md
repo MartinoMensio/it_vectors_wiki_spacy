@@ -2,7 +2,7 @@
 
 ## Data source
 
-The source for the data is the Italian Wikipedia, downloaded as a dump from [there](dumps.wikimedia.org/itwiki/)
+The source for the data is the Italian Wikipedia, downloaded as a dump from [there](https://dumps.wikimedia.org/itwiki/)
 
 ## Preprocessing
 
