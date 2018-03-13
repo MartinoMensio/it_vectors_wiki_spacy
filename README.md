@@ -39,3 +39,18 @@ Option 2: install with pip the complete model from [there](https://github.com/Ma
 pip install -U https://github.com/MartinoMensio/it_vectors_wiki_spacy/releases/download/v1.0/it_vectors_wiki_lg-1.0.0.tar.gz
 ```
 then simply load the model in SpaCy with `nlp = spacy.load('it_vectors_wiki_lg')`
+
+## Evaluation
+
+The `questions-words-ITA.txt` come from http://hlt.isti.cnr.it/wordembeddings/ as part of the paper
+
+```bibtex
+@inproceedings{berardi2015word,
+  title={Word Embeddings Go to Italy: A Comparison of Models and Training Datasets.},
+  author={Berardi, Giacomo and Esuli, Andrea and Marcheggiani, Diego},
+  booktitle={IIR},
+  year={2015}
+}
+```
+
+The preprocessing + the new dump of wikipedia gives the foolwing results (script `accuracy.py`): 58.14% that seems an improvement with respect to the scores in the paper.
