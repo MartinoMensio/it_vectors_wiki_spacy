@@ -2,7 +2,7 @@
 
 ## Data source
 
-The source for the data is the Italian Wikipedia, downloaded as a dump from [there](https://dumps.wikimedia.org/itwiki/)
+The source for the data is the Italian Wikipedia, downloaded from [Wikipedia Dumps](https://dumps.wikimedia.org/itwiki/).
 
 ## Preprocessing
 
@@ -34,15 +34,19 @@ The whole SpaCy model (a blank italian nlp + the word vectors) is saved and pack
 
 Option 1: do the preceding steps to train the vectors and then load the vectors with `nlp.vocab.vectors.from_disk('path')`.
 
-Option 2: install with pip the complete model from [there](https://github.com/MartinoMensio/it_vectors_wiki_spacy/releases/download/v1.0/it_vectors_wiki_lg-1.0.0.tar.gz) with the following command:
+Option 2: install with pip the complete model from [the latest release](https://github.com/MartinoMensio/it_vectors_wiki_spacy/releases/v1.0.1/) with the following command:
+
 ```bash
 pip install -U https://github.com/MartinoMensio/it_vectors_wiki_spacy/releases/download/v1.0.1/it_vectors_wiki_lg-1.0.1.tar.gz
 ```
-then simply load the model in SpaCy with `nlp = spacy.load('it_vectors_wiki_lg')`
+
+then simply load the model in SpaCy with `nlp = spacy.load('it_vectors_wiki_lg')`.
+
+If you want to use the vectors in another environment (outside SpaCy) you can find the raw embeddings in the [vectors-1.0 release](https://github.com/MartinoMensio/it_vectors_wiki_spacy/releases/vectors-1.0/) which contains
 
 ## Evaluation
 
-The `questions-words-ITA.txt` come from http://hlt.isti.cnr.it/wordembeddings/ as part of the paper
+The `questions-words-ITA.txt` come from http://hlt.isti.cnr.it/wordembeddings/ as part of the paper:
 
 ```bibtex
 @inproceedings{berardi2015word,
@@ -53,4 +57,4 @@ The `questions-words-ITA.txt` come from http://hlt.isti.cnr.it/wordembeddings/ a
 }
 ```
 
-The preprocessing + the new dump of wikipedia gives the foolwing results (script `accuracy.py`): 58.14% that seems an improvement with respect to the scores in the paper.
+The preprocessing + the new dump of wikipedia gives the following results (script `accuracy.py`): 58.14% that seems an improvement with respect to the scores in the paper.
