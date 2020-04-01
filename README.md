@@ -36,7 +36,7 @@ Option 1: do the preceding steps to train the vectors and then load the vectors 
 
 Option 2: install with pip the complete model from [there](https://github.com/MartinoMensio/it_vectors_wiki_spacy/releases/download/v1.0/it_vectors_wiki_lg-1.0.0.tar.gz) with the following command:
 ```bash
-pip install -U https://github.com/MartinoMensio/it_vectors_wiki_spacy/releases/download/v1.0/it_vectors_wiki_lg-1.0.0.tar.gz
+pip install -U https://github.com/MartinoMensio/it_vectors_wiki_spacy/releases/download/v1.0.1/it_vectors_wiki_lg-1.0.1.tar.gz
 ```
 then simply load the model in SpaCy with `nlp = spacy.load('it_vectors_wiki_lg')`
 

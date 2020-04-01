@@ -5,7 +5,7 @@ from spacy.language import Language
 
 def update_progress(curr, tot):
     workdone = curr/tot
-    print("\rProgress: [{0:50s}] {1:.1f}% - {2}/{3}".format('#' * int(workdone * 50), workdone*100, curr, tot), 
+    print("\rProgress: [{0:50s}] {1:.1f}% - {2}/{3}".format('#' * int(workdone * 50), workdone*100, curr, tot),
 end="", flush=True)
 
 @plac.annotations(
@@ -37,8 +37,8 @@ def main(input_file, output_folder_vectors=None, output_folder_model=None):
         # edit package details
         nlp.meta['name'] = 'vectors_wiki_lg'
         nlp.meta['lang'] = 'it'
-        nlp.meta['version'] = '1.0.0'
-        nlp.meta['spacy_version'] = '>=2.0.0,<3.0.0'
+        nlp.meta['version'] = '1.0.1'
+        nlp.meta['spacy_version'] = '>=2.1.0,<3.0.0'
         nlp.meta['description'] = '300-dimensional word vectors trained on Wikipedia with GloVe.'
         nlp.meta['author'] = 'Martino Mensio'
         nlp.meta['email'] = 'martinomensio@outlook.it'
